@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    padding-bottom: 60px; /* espaço pro menu fixo não cobrir conteúdo */
+}
+
+.top-bar {
+    background: #e0e0e0;
+    padding: 10px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.top-bar a {
+    color: #003366;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+
+.header img {
+    height: 60px;
+    margin-right: 15px;
+}
+
+.nav {
+    background-color: #ffffff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.banner {
+    background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.form-container {
+    background: #e1dede;
+    padding: 30px;
+    margin: -40px auto 20px;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.form-container select {
+    padding: 10px;
+    font-size: 14px;
+    width: 200px;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.titulo-imoveis {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0 20px;
+}
+
+.titulo-imoveis h3 {
+    color: red;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px 40px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card .info {
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* Menu inferior fixo */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #003366;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.bottom-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.bottom-nav a:hover {
+    text-decoration: underline;
+}
+/* PAGINA CONTATO */
+/* Container centralizado */
+.container {
+    max-width: 800px; /* largura controlada, igual ao exemplo */
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+.container h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+.form-contato {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-contato label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-contato .obrigatorio {
+    font-size: 12px;
+    color: red;
+    margin-left: 5px;
+}
+
+.form-contato input,
+.form-contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Botão */
+.form-contato button {
+    margin-top: 15px;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.form-contato button:hover {
+    background: #0056b3;
+}
