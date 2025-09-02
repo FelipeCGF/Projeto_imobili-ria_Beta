@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Imobiliária Garanhuns - PE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Topo com contatos -->
+    <div class="top-bar">
+        📞 (87) 9 9999-9999 &nbsp;
+        📧 <a href="mailto:contato@imobiliariagaranhuns.com">contato@imobiliariagaranhuns.com</a>
+    </div>
+
+    <!-- Logo -->
+    <div class="header">
+        <img src="https://img.freepik.com/vetores-premium/design-de-logotipo-de-casa-moderna-imobiliaria_638341-33.jpg" alt="Logo Imobiliária">
+        <h1>Imobiliária Garanhuns - PE</h1>
+    </div>
+
+    <!-- Menu -->
+    <div class="nav">
+        <a href="/">Início</a>
+        <a href="#">Venda</a>
+        <a href="#">Aluguel</a>
+        <a href="/contato">Contato</a>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner">
+        Seu imóvel em Garanhuns-PE está aqui!
+    </div>
+
+    <!-- Formulário de busca -->
+    <div class="form-container">
+        <select>
+            <option value="venda">Venda</option>
+            <option value="aluguel">Aluguel</option>
+        </select>
+        <button>🔍 Buscar</button>
+    </div>
+
+    <!-- Cards dinâmicos -->
+    <!-- Cards dinâmicos -->
+<div class="cards">
+    {% for card in cards %}
+        <div class="card">
+            {% if card.imagem %}
+                <img src="{{ card.imagem }}" alt="{{ card.titulo }}">
+            {% endif %}
+            <div class="info">
+                <strong>{{ card.titulo }}</strong><br>
+                {{ card.descricao }}<br>
+            </div>
+        </div>
+    {% else %}
+        <p class="text-center">Nenhum imóvel cadastrado ainda.</p>
+    {% endfor %}
+</div>
+
+
+    <!-- Menu inferior fixo -->
+    <div class="bottom-nav">
+        <a href="/">🏠 Início</a>
+        <a href="#">🛒 Venda</a>
+        <a href="#">🏢 Aluguel</a>
+        <a href="/contato">📞 Contato</a>
+    </div>
+
+</body>
+</html>
